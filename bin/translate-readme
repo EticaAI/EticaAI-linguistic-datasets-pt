@@ -1,0 +1,44 @@
+#!/bin/sh
+#===============================================================================
+#
+#          FILE:  translate-readme
+#
+#         USAGE:  translate-readme
+#
+#   DESCRIPTION:  
+#
+#       OPTIONS:  ---
+#
+#  REQUIREMENTS:  ---
+#          BUGS:  ---
+#         NOTES:  ---
+#        AUTHOR:  Emerson Rocha <rocha[at]ieee.org>
+#       COMPANY:  Etica.AI
+#       LICENSE:  Public Domain / BSD Zero Clause License
+#                 SPDX-License-Identifier: Unlicense OR 0BSD
+#       VERSION:  v2.0.1
+#       CREATED:  2020-12-01 19:32 UTC
+#      REVISION:  ---
+#===============================================================================
+
+# Executando da pasta raiz:
+#    trans pt:en -brief file://README.md -o README.en.md
+
+trans -brief file://README.md -o README.en.md 
+
+# @see https://stackoverflow.com/questions/762631/find-out-if-a-command-exists-on-posix-system
+# @see https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script
+
+# if ! command -v trans &> /dev/null
+if ! command -v trans --version
+then
+    echo "trans not found"
+    echo "https://www.soimort.org/translate-shell/#installation"
+    exit
+fi
+
+# TODO: This still not working from command line. Needs to execute the
+#           trans -brief file://README.md -o README.en.md
+#       directly from the command line.
+
+trans pt:en -brief file://README.md -o README.en.md
