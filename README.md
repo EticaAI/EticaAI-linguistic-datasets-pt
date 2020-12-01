@@ -12,3 +12,8 @@ caráter multidisciplinar, e que idealmente _já deveria estar prontas e
 aceitavelmente validadas_: quando não existem, na melhor das hipóteses, podem
 forçar serem feitas por não especialista e prejudicar qualidade, e na pior, até
 impedir a produção de tecnologias inovadoras.
+
+
+## Arquivos de trabalho
+- HXL-CPLP-Publico
+  - <https://drive.google.com/drive/u/1/folders/1VLm29IBV6iOnfagRKKD8cLntDAjIjL0z>

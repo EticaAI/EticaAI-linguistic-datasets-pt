@@ -16,15 +16,16 @@
 #       COMPANY:  Etica.AI
 #       LICENSE:  Public Domain / BSD Zero Clause License
 #                 SPDX-License-Identifier: Unlicense OR 0BSD
-#       VERSION:  v2.0.1
+#       VERSION:  v1.0
 #       CREATED:  2020-12-01 19:32 UTC
 #      REVISION:  ---
 #===============================================================================
 
 # Executando da pasta raiz:
 #    trans pt:en -brief file://README.md -o README.en.md
-
-trans -brief file://README.md -o README.en.md 
+#    trans pt:en -browser firefox -brief file://README.md
+#    trans pt:en -browser firefox -brief https://github.com/EticaAI/EticaAI-linguistic-datasets-pt/blob/main/README.md
+#    trans pt:en -browser firefox -brief https://raw.githubusercontent.com/EticaAI/EticaAI-linguistic-datasets-pt/main/README.md
 
 # @see https://stackoverflow.com/questions/762631/find-out-if-a-command-exists-on-posix-system
 # @see https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script

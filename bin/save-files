@@ -1,0 +1,29 @@
+#!/bin/sh
+#===============================================================================
+#
+#          FILE:  save-files
+#
+#         USAGE:  save-files
+#
+#   DESCRIPTION:  ---
+#
+#       OPTIONS:  ---
+#
+#  REQUIREMENTS:  ---
+#          BUGS:  ---
+#         NOTES:  ---
+#        AUTHOR:  Emerson Rocha <rocha[at]ieee.org>
+#       COMPANY:  Etica.AI
+#       LICENSE:  Public Domain / BSD Zero Clause License
+#                 SPDX-License-Identifier: Unlicense OR 0BSD
+#       VERSION:  v1.0
+#       CREATED:  2020-12-01 21:41 UTC
+#      REVISION:  ---
+#===============================================================================
+
+# @see https://proxy.hxlstandard.org/data/a16d45
+
+DATA_DIR="$(dirname $(readlink -f $0))/../data"
+
+curl https://proxy.hxlstandard.org/data/a16d45/download/Etica_AI_Hate-speech-portuguese_.csv -o "$DATA_DIR/Hate-speech-portuguese.csv"
+curl https://proxy.hxlstandard.org/data/a16d45/download/Etica_AI_Hate-speech-portuguese_.csv -o "$DATA_DIR/Hate-speech-portuguese.hxl"
