@@ -1,14 +1,27 @@
-# EticaAI Linguistic Datasets PT
-** [public draft Linguistic data sets for Portuguese
-with flexible licenses. **
+# Linguistic data sets in Portuguese via cooperation with communities
+**[work in progress] Permanent project to coordinate the creation and update
+linguistic data sets (such as those that can be used to detect
+discrimination and hate speech) preferably validated by people
+representatives of affected groups or subject matter experts. Dedicated to
+public domain.**
 
-(Note: this document has sample text in Portuguese to test the
-`bin / translate-readme` tool.)
+## Role of Etica.AI
 
-The aim of this project, inspired by the spirit of [FOSS] (https://pt.wikipedia.org/wiki/Software_livre_e_de_c%C3%B3digo_aberto),
-is to list sources of knowledge representations that, depending on the language
-and local cultures, cannot be imported. They require special attention,
-multidisciplinary character, and that ideally _ should already be ready and
-acceptably validated_: when they do not exist, at best, they can
-force them to be made by a non-specialist and impair quality, and at worst, until
-prevent the production of innovative technologies.
+Unlike [EticaAI/linguistic-datasets-portuguese](https://github.com/EticaAI/linguistic-datasets-portuguese)
+(which is a list for different data sets
+in Portuguese from different sources) this repository contains
+reference for the data sets themselves where Etica.AI serves as
+organization to allow collaboration on an ongoing basis.
+
+Linguistic datasets in Portuguese are rare, not very complete and, when they exist,
+they are often on a restricted use license. The importance of our
+work here, to even release commercial use, has the potential to help
+in automations (such as detection of verbal attacks).
+
+## Role of people in the community
+
+(...)
+
+## Working files
+- HXL-CPLP-Publico
+  - <https://drive.google.com/drive/u/1/folders/1VLm29IBV6iOnfagRKKD8cLntDAjIjL0z>
