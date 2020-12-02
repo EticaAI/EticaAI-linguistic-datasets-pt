@@ -11,15 +11,25 @@ Dedicado ao domínio público.
 
 <!-- TOC depthFrom:2 -->
 
+- [Conjunto de dados](#conjunto-de-dados)
 - [Grupos envolvidos](#grupos-envolvidos)
     - [Papel da Etica.AI](#papel-da-eticaai)
     - [Papel do HXL-CPLP](#papel-do-hxl-cplp)
     - [Papel de pessoas da comunidade](#papel-de-pessoas-da-comunidade)
-- [Arquivos de trabalho](#arquivos-de-trabalho)
 
 <!-- /TOC -->
 
 ---
+
+## Conjunto de dados
+
+> NOTA: neste momento, 2020-12-01, o conteúdo disponibilizado aqui não está
+  pronto para uso final e serve principalmente para testar estratégias de como
+  coletar e HXL hashtags para usar para classificar a informação.
+
+- HXL-CPLP-Publico
+  - <https://drive.google.com/drive/u/1/folders/1VLm29IBV6iOnfagRKKD8cLntDAjIjL0z>
+
 
 ## Grupos envolvidos
 
@@ -65,6 +75,3 @@ especial contribuição de pessoas que ajudem a coordenar/revalidar trabalho de
 outras ou que criaram conteúdo inicial significativo inclusive se você prefere
 não assumir autoria de suas contribuições por medo de retaliações.
 
-## Arquivos de trabalho
-- HXL-CPLP-Publico
-  - <https://drive.google.com/drive/u/1/folders/1VLm29IBV6iOnfagRKKD8cLntDAjIjL0z>
