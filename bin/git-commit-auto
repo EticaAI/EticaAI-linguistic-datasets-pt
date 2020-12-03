@@ -1,0 +1,40 @@
+#!/bin/sh
+#===============================================================================
+#
+#          FILE:  git-commit-auto
+#
+#         USAGE:  git-commit-auto
+#
+#   DESCRIPTION:  [PT] git commit com mensagem automatizada porém minimamente
+#                      descritiva.
+#                 [EN] git commit with automated but minimally descriptive
+#                      message.
+#
+#       OPTIONS:  ---
+#
+#  REQUIREMENTS:  ---
+#          BUGS:  ---
+#         NOTES:  ---
+#        AUTHOR:  Emerson Rocha <rocha[at]ieee.org>
+#       COMPANY:  Etica.AI
+#       LICENSE:  Public Domain / BSD Zero Clause License
+#                 SPDX-License-Identifier: Unlicense OR 0BSD
+#       VERSION:  v1.0
+#       CREATED:  2020-12-03 13:23 UTC
+#      REVISION:  ---
+#===============================================================================
+
+# @see https://stackoverflow.com/questions/35010953/how-to-automatically-generate-commit-message
+
+TITLE_1=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+TITLE_2=$(LANG=C git status --porcelain | wc -l)
+DESCRIPTION=$(LANG=C git status --porcelain)
+
+echo "$TITLE_1 diff $TITLE_2
+$DESCRIPTION
+"
+
+echo "TODO: [PT] alem de exibir a mensagem, automaticamente criar o commit (fititnt, 2020-12-01 14:43 BRT)"
+
+# [PT] Para adicionar antes de colocar git-commit-auto no PATH estou usando
+#      /workspace/git/EticaAI/EticaAI-linguistic-datasets-pt/bin/git-commit-auto
