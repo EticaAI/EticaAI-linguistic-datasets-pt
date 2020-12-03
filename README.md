@@ -75,3 +75,10 @@ especial contribuição de pessoas que ajudem a coordenar/revalidar trabalho de
 outras ou que criaram conteúdo inicial significativo inclusive se você prefere
 não assumir autoria de suas contribuições por medo de retaliações.
 
+# Licença
+
+[![Domínio Público](imagens/dominio-publico.png)](UNLICENSE)
+
+Na medida do possível segundo a lei, [Etica.AI](https://etica.ai)
+renunciou a todos os direitos autorais e direitos conexos ou vizinhos a este
+trabalho para o [Domínio Público](UNLICENSE).
