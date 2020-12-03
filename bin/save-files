@@ -7,7 +7,8 @@
 #
 #   DESCRIPTION:  ---
 #
-#       OPTIONS:  ---
+#       OPTIONS:  DATA_DIR: enviroment variable to define where to save the
+#                 output
 #
 #  REQUIREMENTS:  ---
 #          BUGS:  ---
@@ -21,9 +22,8 @@
 #      REVISION:  ---
 #===============================================================================
 
+_DATA_DIR=${DATA_DIR:-/workspace/git/EticaAI/EticaAI-linguistic-datasets-pt-data}
+
 # @see https://proxy.hxlstandard.org/data/a16d45
-
-DATA_DIR="$(dirname $(readlink -f $0))/../data"
-
-curl https://proxy.hxlstandard.org/data/a16d45/download/Etica_AI_Hate-speech-portuguese_.csv -o "$DATA_DIR/Hate-speech-portuguese.csv"
-curl https://proxy.hxlstandard.org/data/a16d45/download/Etica_AI_Hate-speech-portuguese_.csv -o "$DATA_DIR/Hate-speech-portuguese.hxl"
+curl https://proxy.hxlstandard.org/data/a16d45/download/Etica_AI_Hate-speech-portuguese_.csv -o "$_DATA_DIR/Hate-speech-portuguese.csv"
+curl https://proxy.hxlstandard.org/data/a16d45/download/Etica_AI_Hate-speech-portuguese_.csv -o "$_DATA_DIR/Hate-speech-portuguese.hxl"

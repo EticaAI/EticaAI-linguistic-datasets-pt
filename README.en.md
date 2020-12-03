@@ -84,3 +84,11 @@ not to assume authorship of your contributions for fear of retaliation.
 ## Working files
 - HXL-CPLP-Publico
   - <https://drive.google.com/drive/u/1/folders/1VLm29IBV6iOnfagRKKD8cLntDAjIjL0z>
+
+# Licença
+
+[![Public Domain](img/dominio-publico.png)](UNLICENSE)
+
+As far as possible under the law, [Etica.AI](https://etica.ai)
+waived all copyrights and neighboring or neighboring rights to this
+work for the [Public Domain] (UNLICENSE).

@@ -77,7 +77,7 @@ não assumir autoria de suas contribuições por medo de retaliações.
 
 # Licença
 
-[![Domínio Público](imagens/dominio-publico.png)](UNLICENSE)
+[![Domínio Público](img/dominio-publico.png)](UNLICENSE)
 
 Na medida do possível segundo a lei, [Etica.AI](https://etica.ai)
 renunciou a todos os direitos autorais e direitos conexos ou vizinhos a este

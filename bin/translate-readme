@@ -5,7 +5,16 @@
 #
 #         USAGE:  translate-readme
 #
-#   DESCRIPTION:  
+#   DESCRIPTION:  [PT] Como o projeto EticaAI-linguistic-datasets-pt está focado
+#                      em contribuições em português e para tornar o mais
+#                      acessível possível para novos voluntários, optamos por
+#                      escrever em português e fazer tradução automática sem
+#                      revisão humana. Isso é intencional.
+#                 [EN] Since the EticaAI-linguistic-datasets-pt project is
+#                      focused on Portuguese contributions and to make as
+#                      as acessible as possible for new volunteers, we choosen
+#                      to write in Portuguese and do machine translation with no
+#                      human review at all. This is intentional.
 #
 #       OPTIONS:  ---
 #
@@ -16,30 +25,72 @@
 #       COMPANY:  Etica.AI
 #       LICENSE:  Public Domain / BSD Zero Clause License
 #                 SPDX-License-Identifier: Unlicense OR 0BSD
-#       VERSION:  v1.0
+#       VERSION:  v2.0
 #       CREATED:  2020-12-01 19:32 UTC
-#      REVISION:  ---
+#      REVISION:  2020-12-03 16:31 UTC [PT] v2.0; abre navegador em vez de usar
+#                                           translate-shell
 #===============================================================================
 
-# Executando da pasta raiz:
-#    trans pt:en -brief file://README.md -o README.en.md
-#    trans pt:en -browser firefox -brief file://README.md
-#    trans pt:en -browser firefox -brief https://github.com/EticaAI/EticaAI-linguistic-datasets-pt/blob/main/README.md
-#    trans pt:en -browser firefox -brief https://raw.githubusercontent.com/EticaAI/EticaAI-linguistic-datasets-pt/main/README.md
+#### lang ______________________________________________________________________
+# TODO: [PT] Tecnicamente é possivel exibir apenas mensagens de ajuda no idioma
+#            em que o terminal esta rodando. Este bloco é um rascunho disto. 
+# TODO: [EN] It is technically possible to display only help messages in the
+#            language in which the terminal is running. This block is a draft
+#            of this.
 
-# @see https://stackoverflow.com/questions/762631/find-out-if-a-command-exists-on-posix-system
-# @see https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script
+# @see https://askubuntu.com/questions/350679/get-system-locale-language-code-in-bash-for-a-dynamic-path
+# lang=$(locale | grep LANGUAGE | cut -d= -f2 | cut -d_ -f1)
 
-# if ! command -v trans &> /dev/null
-if ! command -v trans --version
+#### trans/xdg-open open _______________________________________________________
+if command -v trans --version
 then
-    echo "trans not found"
-    echo "https://www.soimort.org/translate-shell/#installation"
+    echo "[PT] abrindo arquivo no seu navegador agora..."
+    echo "[EN] opening file in your browser now..."
+    trans pt:en -browser firefox -brief https://raw.githubusercontent.com/EticaAI/EticaAI-linguistic-datasets-pt/main/README.md
     exit
 fi
 
-# TODO: This still not working from command line. Needs to execute the
-#           trans -brief file://README.md -o README.en.md
-#       directly from the command line.
+if command -v xdg-open
+then
+    echo "[PT] abrindo arquivo no seu navegador agora..."
+    echo "[EN] opening file in your browser now..."
+    xdg-open "https://translate.google.com/translate?hl=pt&sl=pt&tl=en&u=https://raw.githubusercontent.com/EticaAI/EticaAI-linguistic-datasets-pt/main/README.md"
+    exit
+fi
 
-trans pt:en -brief file://README.md -o README.en.md
+if command -v open
+then
+    echo "[PT] abrindo arquivo no seu navegador agora..."
+    echo "[EN] opening file in your browser now..."
+    open "https://translate.google.com/translate?hl=pt&sl=pt&tl=en&u=https://raw.githubusercontent.com/EticaAI/EticaAI-linguistic-datasets-pt/main/README.md"
+    exit
+fi
+
+echo "[PT] Não foi possivel detectar como abrir interface para ajudar sua tradução de máquina do arquivo README.md"
+echo "[EN] It was not possible to detect how to open the interface to help your machine translation of the README.md file"
+exit 1
+
+
+### Não finalizado _____________________________________________________________
+# [PT] Em teoria é possível usar o translate-shell para fazer tradução usando
+#      apenas linha de comando, porém formatação markdown é perdida. Esta parte
+#      do código está comentada, mas pode servir como base para futuras
+#      automações
+# [EN] In theory it is possible to use translate-shell to do translation using
+#      only the command line, however markdown formatting is lost. This part of
+#      the code is commented out, but it can serve as a basis for future
+#      automations
+
+# if ! command -v trans --version
+# then
+#     echo "[PT] trans não encontrado"
+#     echo "[EN] trans not found"
+#     echo "https://www.soimort.org/translate-shell/#installation"
+#     exit
+# fi
+
+# # TODO: This still not working from command line. Needs to execute the
+# #           trans -brief file://README.md -o README.en.md
+# #       directly from the command line.
+
+# trans pt:en -brief file://README.md -o README.en.md
