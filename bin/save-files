@@ -25,5 +25,5 @@
 _DATA_DIR=${DATA_DIR:-/workspace/git/EticaAI/EticaAI-linguistic-datasets-pt-data}
 
 # @see https://proxy.hxlstandard.org/data/a16d45
-curl https://proxy.hxlstandard.org/data/a16d45/download/Etica_AI_Hate-speech-portuguese_.csv -o "$_DATA_DIR/Hate-speech-portuguese.csv"
-curl https://proxy.hxlstandard.org/data/a16d45/download/Etica_AI_Hate-speech-portuguese_.csv -o "$_DATA_DIR/Hate-speech-portuguese.hxl"
+curl https://proxy.hxlstandard.org/data/a16d45/download/Etica_AI_Hate-speech-portuguese_.csv -o "$_DATA_DIR/working-drafts/Hate-speech-portuguese.csv"
+curl https://proxy.hxlstandard.org/data/a16d45/download/Etica_AI_Hate-speech-portuguese_.csv -o "$_DATA_DIR/working-drafts/Hate-speech-portuguese.hxl"
