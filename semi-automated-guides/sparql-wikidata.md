@@ -195,6 +195,14 @@ SELECT
     ?item
     # ?id
     # ?item_code_v_wikidata
+    ?item_code_v_de_gnd
+    ?item_code_v_jp_ndl
+    ?item_code_v_cz_nkp
+    ?item_code_v_us_mesh
+    ?item_code_v_au_aev
+    ?item_code_v_babelnet
+    ?item_code_v_it_bncf
+    ?item_code_v_de_brendaenzymes
     ?item_name_v_wikidata_i_ar
     ?item_name_v_wikidata_i_en
     ?item_name_v_wikidata_i_es
@@ -211,6 +219,23 @@ WHERE
     # ?item wdt:P279 wd:Q25449120 . # human organ (Q25449120), 5 resultados em 2020 (pouco)
     ?item wdt:P279 wd:Q24060765 . # animal organ (Q24060765), 34 resuldados em 2020 (aidna pouco)
     # ?item wdt:P279 ?id # animal organ (Q24060765), 34 resuldados em 2020 (aidna pouco)
+
+    # German National Library ID, dnb.de
+    OPTIONAL { ?item wdt:P227 ?item_code_v_de_gnd } .
+    # National Diet Library of Japan, ndl.go.jp
+    OPTIONAL { ?item wdt:P349 ?item_code_v_jp_ndl } .
+    # National Library of the Czech Republic, nkp.cz
+    OPTIONAL { ?item wdt:P691 ?item_code_v_cz_nkp } .
+    # Medical Subject Headings (MeSH), nlm.nih.gov/mesh/
+    OPTIONAL { ?item wdt:P486 ?item_code_v_us_mesh } .
+    # Australian Educational Vocabulary ID, vocabulary.curriculum.edu.au
+    OPTIONAL { ?item wdt:P7033 ?item_code_v_au_aev } .
+    # BabelNet, babelnet.org
+    OPTIONAL { ?item wdt:P2581 ?item_code_v_babelnet } .
+    # National Central Library of Florence, bncf.firenze.sbn.it
+    OPTIONAL { ?item wdt:P508 ?item_code_v_it_bncf } .
+    # Brenda Tissue Ontology, www.brenda-enzymes.org
+    OPTIONAL { ?item wdt:P5501 ?item_code_v_de_brendaenzymes } .
 
     # Item, by label
     OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_ar filter (lang(?item_name_v_wikidata_i_ar) = "ar") } .
