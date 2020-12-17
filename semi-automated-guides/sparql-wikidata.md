@@ -85,15 +85,15 @@ ORDER BY ASC(?country_code_v_iso2)
 
 #### Alternativa 2
 
+[Link para esta query](https://query.wikidata.org/#%23%20Retorna%20todos%20os%20pa%C3%ADses%2Fterrit%C3%B3rios%20que%20tenham%20propriedade%20%273166-1%20alpha-2%27%0A%23%0A%23%20Idiomas%20escolhidos%3A%0A%23%20%201%29%20Idiomas%20oficiais%20da%20ONU%2C%20por%20ordem%20alfab%C3%A9tica%20do%20c%C3%B3digo%20de%20idioma%20iso639-2%0A%23%20%202%29%20Idiomas%20mais%20falados%20na%20CPLP%20%28vide%20https%3A%2F%2Fcplp.etica.ai%2F%29%20mais%20Esperanto%20e%20Latim%2C%20por%20ordem%20alfab%C3%A9tica%20c%C3%B3digo%20de%20idioma%20iso639-3%0A%23%0A%23%20TODO%3A%20considerar%20obter%20propriedades%20adicionais%2C%20como%20nome%20oficial%2C%20capital%2C%20etc%20%28fititnt%2C%202020-12-17%2003%3A47%20BRT%29%0A%0ASELECT%0A%20%20%20%20%3Fitem_v_wikidata%0A%20%20%20%20%3Fcountry_name_v_wikidata_i_ar%0A%20%20%20%20%3Fcountry_name_v_wikidata_i_en%0A%20%20%20%20%3Fcountry_name_v_wikidata_i_es%0A%20%20%20%20%3Fcountry_name_v_wikidata_i_fr%0A%20%20%20%20%3Fcountry_name_v_wikidata_i_ru%0A%20%20%20%20%3Fcountry_name_v_wikidata_i_zh%0A%20%20%20%20%3Fcountry_name_v_wikidata_i_epo%0A%20%20%20%20%3Fcountry_name_v_wikidata_i_lat%0A%20%20%20%20%3Fcountry_name_v_wikidata_i_por%0A%20%20%20%20%3Fcountry_name_v_wikidata_i_tet%0A%20%20%20%20%3Fcountry_name_v_wikidata_i_yue%0AWHERE%0A%7B%0A%20%20%20%20%3Fitem%20wdt%3AP297%20%3Fcountry_code_v_iso2%20.%0A%20%20%20%20%3Fitem%20wdt%3AP297%20%3Fcountry_code_v_iso2%20.%0A%20%20%20%20%3Fitem%20wdt%3AP298%20%3Fcountry_code_v_iso3%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP299%20%3Fcountry_code_v_isonum%20%7D%20.%0A%20%20%20%20%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2082%20%3Fcountry_code_v_m49%20%7D%20.%0A%0A%20%20%20%20%23%20UNESCO%20Thesaurus%20ID%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP3916%20%3Fcountry_code_v_wikidata_p3916%20%7D%20.%0A%20%20%20%20%0A%20%20%20%20%23%20OpenStreetMap%20relation%20ID%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP402%20%3Fcountry_code_v_wikidata_p402%20%7D%20.%0A%0A%20%20%20%20%23%20International%20Telecommunication%20Union%20radiocommunication%20division%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP3024%20%3Fcountry_code_v_wikidata_p3024%20%7D%20.%0A%0A%20%20%20%20%23%20Country%2Fterritory%2C%20by%20label%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fcountry_name_v_wikidata_i_ar%20filter%20%28lang%28%3Fcountry_name_v_wikidata_i_ar%29%20%3D%20%22ar%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fcountry_name_v_wikidata_i_en%20filter%20%28lang%28%3Fcountry_name_v_wikidata_i_en%29%20%3D%20%22en%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fcountry_name_v_wikidata_i_es%20filter%20%28lang%28%3Fcountry_name_v_wikidata_i_es%29%20%3D%20%22es%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fcountry_name_v_wikidata_i_fr%20filter%20%28lang%28%3Fcountry_name_v_wikidata_i_fr%29%20%3D%20%22fr%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fcountry_name_v_wikidata_i_ru%20filter%20%28lang%28%3Fcountry_name_v_wikidata_i_ru%29%20%3D%20%22ru%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fcountry_name_v_wikidata_i_zh%20filter%20%28lang%28%3Fcountry_name_v_wikidata_i_zh%29%20%3D%20%22zh%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fcountry_name_v_wikidata_i_epo%20filter%20%28lang%28%3Fcountry_name_v_wikidata_i_epo%29%20%3D%20%22eo%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fcountry_name_v_wikidata_i_lat%20filter%20%28lang%28%3Fcountry_name_v_wikidata_i_lat%29%20%3D%20%22la%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fcountry_name_v_wikidata_i_por%20filter%20%28lang%28%3Fcountry_name_v_wikidata_i_por%29%20%3D%20%22pt%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fcountry_name_v_wikidata_i_tet%20filter%20%28lang%28%3Fcountry_name_v_wikidata_i_tet%29%20%3D%20%22tet%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fcountry_name_v_wikidata_i_yue%20filter%20%28lang%28%3Fcountry_name_v_wikidata_i_yue%29%20%3D%20%22yue%22%29%20%7D%20.%0A%7D)
+
 
 ```sql
-# instance of: human organ (Q25449120)
-# A lista de linguas é baseada 1) nas 6 oficiais da ONU 2) nas mais comuns na CPLP https://cplp.etica.ai/
-#
 # Retorna todos os países/territórios que tenham propriedade '3166-1 alpha-2'
+#
 # Idiomas escolhidos:
-#  1) Idiomas oficiais da ONU, por ordem alfabética do iso2
-#  2) Idiomas mais falados na CPLP, por ordem alfabética, vide https://cplp.etica.ai/
+#  1) Idiomas oficiais da ONU, por ordem alfabética do código de idioma iso639-2
+#  2) Idiomas mais falados na CPLP (vide https://cplp.etica.ai/) mais Esperanto e Latim, por ordem alfabética código de idioma iso639-3
 #
 # TODO: considerar obter propriedades adicionais, como nome oficial, capital, etc (fititnt, 2020-12-17 03:47 BRT)
 
@@ -105,7 +105,9 @@ SELECT
     ?country_name_v_wikidata_i_fr
     ?country_name_v_wikidata_i_ru
     ?country_name_v_wikidata_i_zh
-    ?country_name_v_wikidata_i_pt
+    ?country_name_v_wikidata_i_epo
+    ?country_name_v_wikidata_i_lat
+    ?country_name_v_wikidata_i_por
     ?country_name_v_wikidata_i_tet
     ?country_name_v_wikidata_i_yue
 WHERE
@@ -126,14 +128,16 @@ WHERE
     # International Telecommunication Union radiocommunication division
     OPTIONAL { ?item wdt:P3024 ?country_code_v_wikidata_p3024 } .
 
-    # Country, by label
+    # Country/territory, by label
     OPTIONAL { ?item rdfs:label ?country_name_v_wikidata_i_ar filter (lang(?country_name_v_wikidata_i_ar) = "ar") } .
     OPTIONAL { ?item rdfs:label ?country_name_v_wikidata_i_en filter (lang(?country_name_v_wikidata_i_en) = "en") } .
     OPTIONAL { ?item rdfs:label ?country_name_v_wikidata_i_es filter (lang(?country_name_v_wikidata_i_es) = "es") } .
     OPTIONAL { ?item rdfs:label ?country_name_v_wikidata_i_fr filter (lang(?country_name_v_wikidata_i_fr) = "fr") } .
     OPTIONAL { ?item rdfs:label ?country_name_v_wikidata_i_ru filter (lang(?country_name_v_wikidata_i_ru) = "ru") } .
     OPTIONAL { ?item rdfs:label ?country_name_v_wikidata_i_zh filter (lang(?country_name_v_wikidata_i_zh) = "zh") } .
-    OPTIONAL { ?item rdfs:label ?country_name_v_wikidata_i_pt filter (lang(?country_name_v_wikidata_i_pt) = "pt") } .
+    OPTIONAL { ?item rdfs:label ?country_name_v_wikidata_i_epo filter (lang(?country_name_v_wikidata_i_epo) = "eo") } .
+    OPTIONAL { ?item rdfs:label ?country_name_v_wikidata_i_lat filter (lang(?country_name_v_wikidata_i_lat) = "la") } .
+    OPTIONAL { ?item rdfs:label ?country_name_v_wikidata_i_por filter (lang(?country_name_v_wikidata_i_por) = "pt") } .
     OPTIONAL { ?item rdfs:label ?country_name_v_wikidata_i_tet filter (lang(?country_name_v_wikidata_i_tet) = "tet") } .
     OPTIONAL { ?item rdfs:label ?country_name_v_wikidata_i_yue filter (lang(?country_name_v_wikidata_i_yue) = "yue") } .
 }
@@ -195,4 +199,43 @@ ORDER BY ASC(?country_code_v_iso2)
 
 ### Informações sobre itens que são partes do corpo humano
 
+[Link para esta query](https://query.wikidata.org/#%23%20Retorna%20todos%20os%20pa%C3%ADses%2Fterrit%C3%B3rios%20que%20tenham%20propriedade%20instance%20of%3A%20human%20organ%20%28Q25449120%29%0A%23%0A%23%20Idiomas%20escolhidos%3A%0A%23%20%201%29%20Idiomas%20oficiais%20da%20ONU%2C%20por%20ordem%20alfab%C3%A9tica%20do%20c%C3%B3digo%20de%20idioma%20iso639-2%0A%23%20%202%29%20Idiomas%20mais%20falados%20na%20CPLP%20%28vide%20https%3A%2F%2Fcplp.etica.ai%2F%29%20mais%20Esperanto%20e%20Latim%2C%20por%20ordem%20alfab%C3%A9tica%20c%C3%B3digo%20de%20idioma%20iso639-3%0ASELECT%0A%20%20%20%20%3Fitem%0A%20%20%20%20%3Fitem_name_v_wikidata_i_ar%0A%20%20%20%20%3Fitem_name_v_wikidata_i_en%0A%20%20%20%20%3Fitem_name_v_wikidata_i_es%0A%20%20%20%20%3Fitem_name_v_wikidata_i_fr%0A%20%20%20%20%3Fitem_name_v_wikidata_i_ru%0A%20%20%20%20%3Fitem_name_v_wikidata_i_zh%0A%20%20%20%20%3Fitem_name_v_wikidata_i_epo%0A%20%20%20%20%3Fitem_name_v_wikidata_i_lat%0A%20%20%20%20%3Fitem_name_v_wikidata_i_por%0A%20%20%20%20%3Fitem_name_v_wikidata_i_tet%0A%20%20%20%20%3Fitem_name_v_wikidata_i_yue%0AWHERE%0A%7B%0A%20%20%20%20%23%20%3Fitem%20wdt%3AP297%20%3Fcountry_code_v_iso2%20.%0A%20%20%20%20%3Fitem%20wdt%3AP279%20wd%3AQ25449120%20.%0A%0A%20%20%20%20%23%20Item%2C%20by%20label%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_ar%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_ar%29%20%3D%20%22ar%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_en%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_en%29%20%3D%20%22en%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_es%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_es%29%20%3D%20%22es%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_fr%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_fr%29%20%3D%20%22fr%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_ru%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_ru%29%20%3D%20%22ru%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_zh%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_zh%29%20%3D%20%22zh%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_epo%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_epo%29%20%3D%20%22eo%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_lat%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_lat%29%20%3D%20%22la%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_por%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_por%29%20%3D%20%22pt%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_tet%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_tet%29%20%3D%20%22tet%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_yue%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_yue%29%20%3D%20%22yue%22%29%20%7D%20.%0A%7D)
 
+```sql
+# Retorna todos os países/territórios que tenham propriedade instance of: human organ (Q25449120)
+#
+# Idiomas escolhidos:
+#  1) Idiomas oficiais da ONU, por ordem alfabética do código de idioma iso639-2
+#  2) Idiomas mais falados na CPLP (vide https://cplp.etica.ai/) mais Esperanto e Latim, por ordem alfabética código de idioma iso639-3
+SELECT
+    ?item
+    ?item_name_v_wikidata_i_ar
+    ?item_name_v_wikidata_i_en
+    ?item_name_v_wikidata_i_es
+    ?item_name_v_wikidata_i_fr
+    ?item_name_v_wikidata_i_ru
+    ?item_name_v_wikidata_i_zh
+    ?item_name_v_wikidata_i_epo
+    ?item_name_v_wikidata_i_lat
+    ?item_name_v_wikidata_i_por
+    ?item_name_v_wikidata_i_tet
+    ?item_name_v_wikidata_i_yue
+WHERE
+{
+    # ?item wdt:P297 ?country_code_v_iso2 .
+    ?item wdt:P279 wd:Q25449120 .
+
+    # Item, by label
+    OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_ar filter (lang(?item_name_v_wikidata_i_ar) = "ar") } .
+    OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_en filter (lang(?item_name_v_wikidata_i_en) = "en") } .
+    OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_es filter (lang(?item_name_v_wikidata_i_es) = "es") } .
+    OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_fr filter (lang(?item_name_v_wikidata_i_fr) = "fr") } .
+    OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_ru filter (lang(?item_name_v_wikidata_i_ru) = "ru") } .
+    OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_zh filter (lang(?item_name_v_wikidata_i_zh) = "zh") } .
+    OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_epo filter (lang(?item_name_v_wikidata_i_epo) = "eo") } .
+    OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_lat filter (lang(?item_name_v_wikidata_i_lat) = "la") } .
+    OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_por filter (lang(?item_name_v_wikidata_i_por) = "pt") } .
+    OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_tet filter (lang(?item_name_v_wikidata_i_tet) = "tet") } .
+    OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_yue filter (lang(?item_name_v_wikidata_i_yue) = "yue") } .
+}
+```
