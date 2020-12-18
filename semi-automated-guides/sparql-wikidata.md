@@ -179,6 +179,12 @@ WHERE
 
 [Link para esta query](https://query.wikidata.org/#%23%20Retorna%20lista%20de%20itens%20que%20s%C3%A3o%20parte%20de%20animal%20organ%20%28Q24060765%29%0A%23%20Item%20de%20referencia%3A%20heart%20%28Q1072%29%20https%3A%2F%2Fwww.wikidata.org%2Fwiki%2FQ1072%0A%23%0A%23%20Idiomas%20escolhidos%3A%0A%23%20%201%29%20Idiomas%20oficiais%20da%20ONU%2C%20por%20ordem%20alfab%C3%A9tica%20do%20c%C3%B3digo%20de%20idioma%20iso639-2%0A%23%20%202%29%20Idiomas%20mais%20falados%20na%20CPLP%20%28vide%20https%3A%2F%2Fcplp.etica.ai%2F%29%20mais%20Esperanto%20e%20Latim%2C%20por%20ordem%20alfab%C3%A9tica%20c%C3%B3digo%20de%20idioma%20iso639-3%0A%23%0A%23%20TODO%3A%20a%20query%20ainda%20esta%20retornando%20poucos%20valores.%20O%20ideal%20seria%20o%20%0A%23%20%20%20%20%20%20%20mais%20pr%C3%B3ximo%20de%20tudo%20que%20poderia%20ser%20citado%20relacionado%20a%20corpo%20humano%0A%23%20%20%20%20%20%20%20mesmo%20que%20tenhamos%20que%20quebrar%20em%20mais%20de%20um%20dataset%20%28fititnt%2C%202020-12-17%2008%3A38%20BRT%29%0A%23%20TODO%3A%20a%20query%20deveria%20retornar%20apenas%20o%20valor%20de%20texto%2C%20mas%20esta%20retornando%20URL%20%28fititnt%2C%202020-12-17%2008%3A38%20BRT%29%0ASELECT%0A%20%20%20%20%3Fitem%0A%20%20%20%20%23%20%3Fid%0A%20%20%20%20%23%20%3Fitem_code_v_wikidata%0A%20%20%20%20%3Fitem_name_v_wikidata_i_ar%0A%20%20%20%20%3Fitem_name_v_wikidata_i_en%0A%20%20%20%20%3Fitem_name_v_wikidata_i_es%0A%20%20%20%20%3Fitem_name_v_wikidata_i_fr%0A%20%20%20%20%3Fitem_name_v_wikidata_i_ru%0A%20%20%20%20%3Fitem_name_v_wikidata_i_zh%0A%20%20%20%20%3Fitem_name_v_wikidata_i_epo%0A%20%20%20%20%3Fitem_name_v_wikidata_i_lat%0A%20%20%20%20%3Fitem_name_v_wikidata_i_por%0A%20%20%20%20%3Fitem_name_v_wikidata_i_tet%0A%20%20%20%20%3Fitem_name_v_wikidata_i_yue%0AWHERE%0A%7B%0A%20%20%20%20%23%20%3Fitem%20wdt%3AP279%20wd%3AQ25449120%20.%20%23%20human%20organ%20%28Q25449120%29%2C%205%20resultados%20em%202020%20%28pouco%29%0A%20%20%20%20%3Fitem%20wdt%3AP279%20wd%3AQ24060765%20.%20%23%20animal%20organ%20%28Q24060765%29%2C%2034%20resuldados%20em%202020%20%28aidna%20pouco%29%0A%20%20%20%20%23%20%3Fitem%20wdt%3AP279%20%3Fid%20%23%20animal%20organ%20%28Q24060765%29%2C%2034%20resuldados%20em%202020%20%28aidna%20pouco%29%0A%0A%20%20%20%20%23%20Item%2C%20by%20label%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_ar%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_ar%29%20%3D%20%22ar%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_en%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_en%29%20%3D%20%22en%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_es%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_es%29%20%3D%20%22es%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_fr%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_fr%29%20%3D%20%22fr%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_ru%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_ru%29%20%3D%20%22ru%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_zh%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_zh%29%20%3D%20%22zh%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_epo%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_epo%29%20%3D%20%22eo%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_lat%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_lat%29%20%3D%20%22la%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_por%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_por%29%20%3D%20%22pt%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_tet%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_tet%29%20%3D%20%22tet%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_yue%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_yue%29%20%3D%20%22yue%22%29%20%7D%20.%0A%7D)
 
+<!--
+- Os seguintes identificadores parecem estar offline em 2020, por isso não vão
+  ser adicionados
+    - Brockhaus Enzyklopädie online ID https://en.wikipedia.org/wiki/Brockhaus_Enzyklop%C3%A4die
+-->
+
 ```sql
 # Retorna lista de itens que são parte de animal organ (Q24060765)
 # Item de referencia: heart (Q1072) https://www.wikidata.org/wiki/Q1072
@@ -191,18 +197,22 @@ WHERE
 #       mais próximo de tudo que poderia ser citado relacionado a corpo humano
 #       mesmo que tenhamos que quebrar em mais de um dataset (fititnt, 2020-12-17 08:38 BRT)
 # TODO: a query deveria retornar apenas o valor de texto, mas esta retornando URL (fititnt, 2020-12-17 08:38 BRT)
+#
 SELECT
     ?item
     # ?id
     # ?item_code_v_wikidata
-    ?item_code_v_de_gnd
-    ?item_code_v_jp_ndl
-    ?item_code_v_cz_nkp
-    ?item_code_v_us_mesh
     ?item_code_v_au_aev
     ?item_code_v_babelnet
-    ?item_code_v_it_bncf
+    ?item_code_v_cz_nkp
     ?item_code_v_de_brendaenzymes
+    ?item_code_v_de_gnd
+    ?item_code_v_fr_universalis
+    ?item_code_v_freebase
+    ?item_code_v_jp_ndl
+    ?item_code_v_it_bncf
+    ?item_code_v_uk_britannica
+    ?item_code_v_us_mesh
     ?item_name_v_wikidata_i_ar
     ?item_name_v_wikidata_i_en
     ?item_name_v_wikidata_i_es
@@ -219,23 +229,41 @@ WHERE
     # ?item wdt:P279 wd:Q25449120 . # human organ (Q25449120), 5 resultados em 2020 (pouco)
     ?item wdt:P279 wd:Q24060765 . # animal organ (Q24060765), 34 resuldados em 2020 (aidna pouco)
     # ?item wdt:P279 ?id # animal organ (Q24060765), 34 resuldados em 2020 (aidna pouco)
+    
+    # TODO: parei na Gran Enciclopèdia Catalana ID de https://www.wikidata.org/wiki/Q1072, continuar (fititnt, 2020-12-17 12:12 BRT)
+    
+    # Australian Educational Vocabulary ID, vocabulary.curriculum.edu.au
+    OPTIONAL { ?item wdt:P7033 ?item_code_v_au_aev } .
+
+    # BabelNet, babelnet.org
+    OPTIONAL { ?item wdt:P2581 ?item_code_v_babelnet } .
+
+    # National Library of the Czech Republic, nkp.cz
+    OPTIONAL { ?item wdt:P691 ?item_code_v_cz_nkp } .
+
+    # Brenda Tissue Ontology, www.brenda-enzymes.org
+    OPTIONAL { ?item wdt:P5501 ?item_code_v_de_brendaenzymes } .
 
     # German National Library ID, dnb.de
     OPTIONAL { ?item wdt:P227 ?item_code_v_de_gnd } .
+
+    # Encyclopædia Universalis ID, universalis.fr
+    OPTIONAL { ?item wdt:P3219 ?item_code_v_fr_universalis } .
+
+    # Freebase ID (still accessible via Google)
+    OPTIONAL { ?item wdt:P646 ?item_code_v_freebase } .
+
     # National Diet Library of Japan, ndl.go.jp
     OPTIONAL { ?item wdt:P349 ?item_code_v_jp_ndl } .
-    # National Library of the Czech Republic, nkp.cz
-    OPTIONAL { ?item wdt:P691 ?item_code_v_cz_nkp } .
-    # Medical Subject Headings (MeSH), nlm.nih.gov/mesh/
-    OPTIONAL { ?item wdt:P486 ?item_code_v_us_mesh } .
-    # Australian Educational Vocabulary ID, vocabulary.curriculum.edu.au
-    OPTIONAL { ?item wdt:P7033 ?item_code_v_au_aev } .
-    # BabelNet, babelnet.org
-    OPTIONAL { ?item wdt:P2581 ?item_code_v_babelnet } .
+
     # National Central Library of Florence, bncf.firenze.sbn.it
     OPTIONAL { ?item wdt:P508 ?item_code_v_it_bncf } .
-    # Brenda Tissue Ontology, www.brenda-enzymes.org
-    OPTIONAL { ?item wdt:P5501 ?item_code_v_de_brendaenzymes } .
+
+    # Encyclopædia Britannica Online, britannica.com
+    OPTIONAL { ?item wdt:P1417 ?item_code_v_uk_britannica } .
+
+    # Medical Subject Headings (MeSH), nlm.nih.gov/mesh/
+    OPTIONAL { ?item wdt:P486 ?item_code_v_us_mesh } .
 
     # Item, by label
     OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_ar filter (lang(?item_name_v_wikidata_i_ar) = "ar") } .
