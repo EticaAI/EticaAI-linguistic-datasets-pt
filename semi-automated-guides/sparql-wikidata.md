@@ -177,7 +177,7 @@ WHERE
 
 ### Informações sobre órgãos de animais
 
-[Link para esta query](https://query.wikidata.org/#%23%20Retorna%20lista%20de%20itens%20que%20s%C3%A3o%20parte%20de%20animal%20organ%20%28Q24060765%29%0A%23%20Item%20de%20referencia%3A%20heart%20%28Q1072%29%20https%3A%2F%2Fwww.wikidata.org%2Fwiki%2FQ1072%0A%23%0A%23%20Idiomas%20escolhidos%3A%0A%23%20%201%29%20Idiomas%20oficiais%20da%20ONU%2C%20por%20ordem%20alfab%C3%A9tica%20do%20c%C3%B3digo%20de%20idioma%20iso639-2%0A%23%20%202%29%20Idiomas%20mais%20falados%20na%20CPLP%20%28vide%20https%3A%2F%2Fcplp.etica.ai%2F%29%20mais%20Esperanto%20e%20Latim%2C%20por%20ordem%20alfab%C3%A9tica%20c%C3%B3digo%20de%20idioma%20iso639-3%0A%23%0A%23%20TODO%3A%20a%20query%20ainda%20esta%20retornando%20poucos%20valores.%20O%20ideal%20seria%20o%20%0A%23%20%20%20%20%20%20%20mais%20pr%C3%B3ximo%20de%20tudo%20que%20poderia%20ser%20citado%20relacionado%20a%20corpo%20humano%0A%23%20%20%20%20%20%20%20mesmo%20que%20tenhamos%20que%20quebrar%20em%20mais%20de%20um%20dataset%20%28fititnt%2C%202020-12-17%2008%3A38%20BRT%29%0A%23%20TODO%3A%20a%20query%20deveria%20retornar%20apenas%20o%20valor%20de%20texto%2C%20mas%20esta%20retornando%20URL%20%28fititnt%2C%202020-12-17%2008%3A38%20BRT%29%0ASELECT%0A%20%20%20%20%3Fitem%0A%20%20%20%20%23%20%3Fid%0A%20%20%20%20%23%20%3Fitem_code_v_wikidata%0A%20%20%20%20%3Fitem_name_v_wikidata_i_ar%0A%20%20%20%20%3Fitem_name_v_wikidata_i_en%0A%20%20%20%20%3Fitem_name_v_wikidata_i_es%0A%20%20%20%20%3Fitem_name_v_wikidata_i_fr%0A%20%20%20%20%3Fitem_name_v_wikidata_i_ru%0A%20%20%20%20%3Fitem_name_v_wikidata_i_zh%0A%20%20%20%20%3Fitem_name_v_wikidata_i_epo%0A%20%20%20%20%3Fitem_name_v_wikidata_i_lat%0A%20%20%20%20%3Fitem_name_v_wikidata_i_por%0A%20%20%20%20%3Fitem_name_v_wikidata_i_tet%0A%20%20%20%20%3Fitem_name_v_wikidata_i_yue%0AWHERE%0A%7B%0A%20%20%20%20%23%20%3Fitem%20wdt%3AP279%20wd%3AQ25449120%20.%20%23%20human%20organ%20%28Q25449120%29%2C%205%20resultados%20em%202020%20%28pouco%29%0A%20%20%20%20%3Fitem%20wdt%3AP279%20wd%3AQ24060765%20.%20%23%20animal%20organ%20%28Q24060765%29%2C%2034%20resuldados%20em%202020%20%28aidna%20pouco%29%0A%20%20%20%20%23%20%3Fitem%20wdt%3AP279%20%3Fid%20%23%20animal%20organ%20%28Q24060765%29%2C%2034%20resuldados%20em%202020%20%28aidna%20pouco%29%0A%0A%20%20%20%20%23%20Item%2C%20by%20label%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_ar%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_ar%29%20%3D%20%22ar%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_en%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_en%29%20%3D%20%22en%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_es%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_es%29%20%3D%20%22es%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_fr%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_fr%29%20%3D%20%22fr%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_ru%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_ru%29%20%3D%20%22ru%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_zh%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_zh%29%20%3D%20%22zh%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_epo%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_epo%29%20%3D%20%22eo%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_lat%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_lat%29%20%3D%20%22la%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_por%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_por%29%20%3D%20%22pt%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_tet%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_tet%29%20%3D%20%22tet%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_yue%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_yue%29%20%3D%20%22yue%22%29%20%7D%20.%0A%7D)
+[Link para esta query](https://query.wikidata.org/#%23%20Retorna%20lista%20de%20itens%20que%20s%C3%A3o%20parte%20de%20animal%20organ%20%28Q24060765%29%0A%23%20Item%20de%20referencia%3A%20heart%20%28Q1072%29%20https%3A%2F%2Fwww.wikidata.org%2Fwiki%2FQ1072%0A%23%0A%23%20Idiomas%20escolhidos%3A%0A%23%20%201%29%20Idiomas%20oficiais%20da%20ONU%2C%20por%20ordem%20alfab%C3%A9tica%20do%20c%C3%B3digo%20de%20idioma%20iso639-2%0A%23%20%202%29%20Idiomas%20mais%20falados%20na%20CPLP%20%28vide%20https%3A%2F%2Fcplp.etica.ai%2F%29%20mais%20Esperanto%20e%20Latim%2C%20por%20ordem%20alfab%C3%A9tica%20c%C3%B3digo%20de%20idioma%20iso639-3%0A%23%0A%23%20TODO%3A%20a%20query%20ainda%20esta%20retornando%20poucos%20valores.%20O%20ideal%20seria%20o%20%0A%23%20%20%20%20%20%20%20mais%20pr%C3%B3ximo%20de%20tudo%20que%20poderia%20ser%20citado%20relacionado%20a%20corpo%20humano%0A%23%20%20%20%20%20%20%20mesmo%20que%20tenhamos%20que%20quebrar%20em%20mais%20de%20um%20dataset%20%28fititnt%2C%202020-12-17%2008%3A38%20BRT%29%0A%23%20TODO%3A%20a%20query%20deveria%20retornar%20apenas%20o%20valor%20de%20texto%20%28ex%3A%20Q1072%29%2C%20mas%20esta%20retornando%20URL%20%28fititnt%2C%202020-12-17%2008%3A38%20BRT%29%0A%23%20NOTE%3A%20based%20on%20Q1072%2C%20some%20IDs%20are%20not%20added%20on%20this%20example%20%28at%20least%20not%20yet%29%3A%20P5019%2C%20P1296%2C%20P1256%2C%20P6573%2C%20P6900%2C%20P1245%2C%20P3417%2C%20Q1072%2C%20P7827%0ASELECT%0A%20%20%20%20%3Fitem%0A%20%20%20%20%23%20%3Fid%0A%20%20%20%20%23%20%3Fitem_code_v_wikidata%0A%20%20%20%20%3Fitem_code_v_au_aev%0A%20%20%20%20%3Fitem_code_v_babelnet%0A%20%20%20%20%3Fitem_code_v_cz_nkp%0A%20%20%20%20%3Fitem_code_v_cz_psh%0A%20%20%20%20%3Fitem_code_v_de_brendaenzymes%0A%20%20%20%20%3Fitem_code_v_de_gnd%0A%20%20%20%20%3Fitem_code_v_fipat_ta2%0A%20%20%20%20%3Fitem_code_v_fipat_ta98_id%0A%20%20%20%20%3Fitem_code_v_fipat_ta98_latin%0A%20%20%20%20%3Fitem_code_v_fi_yso%0A%20%20%20%20%3Fitem_code_v_freebase%0A%20%20%20%20%3Fitem_code_v_fr_pactols%0A%20%20%20%20%3Fitem_code_v_fr_universalis%0A%20%20%20%20%3Fitem_code_v_it_bncf%0A%20%20%20%20%3Fitem_code_v_it_treccani%0A%20%20%20%20%3Fitem_code_v_jp_ndl%0A%20%20%20%20%3Fitem_code_v_kbpedia%0A%20%20%20%20%3Fitem_code_v_no_snl%0A%20%20%20%20%3Fitem_code_v_ontobee_xao%0A%20%20%20%20%3Fitem_code_v_ru_greo%0A%20%20%20%20%3Fitem_code_v_uberon%0A%20%20%20%20%3Fitem_code_v_uk_britannica%0A%20%20%20%20%3Fitem_code_v_us_jstor%0A%20%20%20%20%3Fitem_code_v_us_mag%0A%20%20%20%20%3Fitem_code_v_us_mesh%0A%20%20%20%20%3Fitem_code_v_us_umls_cui%0A%20%20%20%20%3Fitem_name_v_wikidata_i_ar%0A%20%20%20%20%3Fitem_name_v_wikidata_i_en%0A%20%20%20%20%3Fitem_name_v_wikidata_i_es%0A%20%20%20%20%3Fitem_name_v_wikidata_i_fr%0A%20%20%20%20%3Fitem_name_v_wikidata_i_ru%0A%20%20%20%20%3Fitem_name_v_wikidata_i_zh%0A%20%20%20%20%3Fitem_name_v_wikidata_i_epo%0A%20%20%20%20%3Fitem_name_v_wikidata_i_lat%0A%20%20%20%20%3Fitem_name_v_wikidata_i_por%0A%20%20%20%20%3Fitem_name_v_wikidata_i_tet%0A%20%20%20%20%3Fitem_name_v_wikidata_i_yue%0AWHERE%0A%7B%0A%20%20%20%20%23%20%3Fitem%20wdt%3AP279%20wd%3AQ25449120%20.%20%23%20human%20organ%20%28Q25449120%29%2C%205%20resultados%20em%202020%20%28pouco%29%0A%20%20%20%20%3Fitem%20wdt%3AP279%20wd%3AQ24060765%20.%20%23%20animal%20organ%20%28Q24060765%29%2C%2034%20resuldados%20em%202020%20%28aidna%20pouco%29%0A%20%20%20%20%0A%20%20%20%20%23%20Australian%20Educational%20Vocabulary%20ID%2C%20vocabulary.curriculum.edu.au%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP7033%20%3Fitem_code_v_au_aev%20%7D%20.%0A%0A%20%20%20%20%23%20BabelNet%2C%20babelnet.org%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2581%20%3Fitem_code_v_babelnet%20%7D%20.%0A%0A%20%20%20%20%23%20National%20Library%20of%20the%20Czech%20Republic%2C%20nkp.cz%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP691%20%3Fitem_code_v_cz_nkp%20%7D%20.%0A%0A%20%20%20%20%23%20Czech%20Technical%20Library%20ID%2C%20psh.techlib.cz%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1051%20%3Fitem_code_v_cz_psh%20%7D%20.%0A%0A%20%20%20%20%23%20Brenda%20Tissue%20Ontology%2C%20www.brenda-enzymes.org%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP5501%20%3Fitem_code_v_de_brendaenzymes%20%7D%20.%0A%0A%20%20%20%20%23%20German%20National%20Library%20ID%2C%20dnb.de%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP227%20%3Fitem_code_v_de_gnd%20%7D%20.%0A%0A%20%20%20%20%23%20Terminologia%20Anatomica%20second%20edition%20%282019%29%20identifier%2C%20ta2viewer.openanatomy.org%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP7173%20%3Fitem_code_v_fipat_ta2%20%7D%20.%0A%0A%20%20%20%20%23%20Terminologia%20Anatomica%2098%20ID%2C%20unifr.ch%2Fifaa%2F%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1323%20%3Fitem_code_v_fipat_ta98_id%20%7D%20.%0A%0A%20%20%20%20%23%20Terminologia%20Anatomica%2098%20Latin%20preferred%20term%2C%20unifr.ch%2Fifaa%2F%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP3982%20%3Fitem_code_v_fipat_ta98_latin%20%7D%20.%0A%0A%20%20%20%20%23%20General%20Finnish%20Ontology%20YSO%2C%20yso.fi%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2347%20%3Fitem_code_v_fi_yso%20%7D%20.%0A%0A%20%20%20%20%23%20Freebase%20ID%20%28still%20accessible%20via%20Google%29%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP646%20%3Fitem_code_v_freebase%20%7D%20.%0A%0A%20%20%20%20%23%20Encyclop%C3%A6dia%20Universalis%20ID%2C%20universalis.fr%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP3219%20%3Fitem_code_v_fr_universalis%20%7D%20.%0A%0A%20%20%20%20%23%20PACTOLS%20thesaurus%20ID%2C%20pactols.frantiq.fr%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP4212%20%3Fitem_code_v_fr_pactols%20%7D%20.%0A%0A%20%20%20%20%23%20National%20Central%20Library%20of%20Florence%2C%20bncf.firenze.sbn.it%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP508%20%3Fitem_code_v_it_bncf%20%7D%20.%0A%0A%20%20%20%20%23%20Enciclopedia%20Italiana%20Treccani%2C%20treccani.it%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP3365%20%3Fitem_code_v_it_treccani%20%7D%20.%0A%0A%20%20%20%20%23%20National%20Diet%20Library%20of%20Japan%2C%20ndl.go.jp%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP349%20%3Fitem_code_v_jp_ndl%20%7D%20.%0A%0A%20%20%20%20%23%20KBpedia%20knowledge%20graph%2C%20kbpedia.org%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP8408%20%3Fitem_code_v_kbpedia%20%7D%20.%0A%0A%20%20%20%20%23%20Store%20norske%20leksikon%20ID%2C%20snl.no%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP4342%20%3Fitem_code_v_no_snl%20%7D%20.%0A%0A%20%20%20%20%23%20Xenopus%20Anatomy%20Ontology%2C%20ontobee.org%2Fontology%2FXAO%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP4495%20%3Fitem_code_v_ontobee_xao%20%7D%20.%0A%0A%20%20%20%20%23%20Great%20Russian%20Encyclopedia%20Online%2C%20bigenc.ru%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2924%20%3Fitem_code_v_ru_greo%20%7D%20.%0A%0A%20%20%20%20%23%20Uberon%2C%20uberon.org%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1554%20%3Fitem_code_v_uberon%20%7D%20.%0A%0A%20%20%20%20%23%20Encyclop%C3%A6dia%20Britannica%20Online%2C%20britannica.com%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1417%20%3Fitem_code_v_uk_britannica%20%7D%20.%0A%0A%20%20%20%20%23%20Medical%20JSTOR%2C%20jstor.org%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP3827%20%3Fitem_code_v_us_jstor%20%7D%20.%0A%0A%20%20%20%20%23%20Microsoft%20Academic%20Graph%20%28MAG%29%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP6366%20%3Fitem_code_v_us_mag%20%7D%20.%0A%0A%20%20%20%20%23%20Medical%20Subject%20Headings%20%28MeSH%29%2C%20nlm.nih.gov%2Fmesh%2F%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP486%20%3Fitem_code_v_us_mesh%20%7D%20.%0A%0A%20%20%20%20%23%20NLM%20Unified%20Medical%20Language%20System%20%28UMLS%29%20controlled%20biomedical%20vocabulary%20unique%20identifier%2C%20nlm.nih.gov%2Fresearch%2Fumls%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2892%20%3Fitem_code_v_us_umls_cui%20%7D%20.%0A%0A%20%20%20%20%23%20Item%2C%20by%20label%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_ar%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_ar%29%20%3D%20%22ar%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_en%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_en%29%20%3D%20%22en%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_es%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_es%29%20%3D%20%22es%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_fr%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_fr%29%20%3D%20%22fr%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_ru%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_ru%29%20%3D%20%22ru%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_zh%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_zh%29%20%3D%20%22zh%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_epo%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_epo%29%20%3D%20%22eo%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_lat%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_lat%29%20%3D%20%22la%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_por%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_por%29%20%3D%20%22pt%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_tet%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_tet%29%20%3D%20%22tet%22%29%20%7D%20.%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fitem_name_v_wikidata_i_yue%20filter%20%28lang%28%3Fitem_name_v_wikidata_i_yue%29%20%3D%20%22yue%22%29%20%7D%20.%0A%7D)
 
 <!--
 - Os seguintes identificadores parecem estar offline em 2020, por isso não vão
@@ -197,7 +197,7 @@ WHERE
 #       mais próximo de tudo que poderia ser citado relacionado a corpo humano
 #       mesmo que tenhamos que quebrar em mais de um dataset (fititnt, 2020-12-17 08:38 BRT)
 # TODO: a query deveria retornar apenas o valor de texto (ex: Q1072), mas esta retornando URL (fititnt, 2020-12-17 08:38 BRT)
-# NOTE: based on Q1072, some IDs are not added on this example (at least not yet): P1296, P1256, P6573, P6900, P1245, P3417
+# NOTE: based on Q1072, some IDs are not added on this example (at least not yet): P5019, P1296, P1256, P6573, P6900, P1245, P3417, Q1072, P7827
 SELECT
     ?item
     # ?id
@@ -211,17 +211,23 @@ SELECT
     ?item_code_v_fipat_ta2
     ?item_code_v_fipat_ta98_id
     ?item_code_v_fipat_ta98_latin
+    ?item_code_v_fi_yso
+    ?item_code_v_freebase
     ?item_code_v_fr_pactols
     ?item_code_v_fr_universalis
-    ?item_code_v_freebase
     ?item_code_v_it_bncf
+    ?item_code_v_it_treccani
     ?item_code_v_jp_ndl
+    ?item_code_v_kbpedia
     ?item_code_v_no_snl
+    ?item_code_v_ontobee_xao
     ?item_code_v_ru_greo
+    ?item_code_v_uberon
     ?item_code_v_uk_britannica
     ?item_code_v_us_jstor
     ?item_code_v_us_mag
     ?item_code_v_us_mesh
+    ?item_code_v_us_umls_cui
     ?item_name_v_wikidata_i_ar
     ?item_name_v_wikidata_i_en
     ?item_name_v_wikidata_i_es
@@ -265,26 +271,41 @@ WHERE
     # Terminologia Anatomica 98 Latin preferred term, unifr.ch/ifaa/
     OPTIONAL { ?item wdt:P3982 ?item_code_v_fipat_ta98_latin } .
 
+    # General Finnish Ontology YSO, yso.fi
+    OPTIONAL { ?item wdt:P2347 ?item_code_v_fi_yso } .
+
+    # Freebase ID (still accessible via Google)
+    OPTIONAL { ?item wdt:P646 ?item_code_v_freebase } .
+
     # Encyclopædia Universalis ID, universalis.fr
     OPTIONAL { ?item wdt:P3219 ?item_code_v_fr_universalis } .
 
     # PACTOLS thesaurus ID, pactols.frantiq.fr
     OPTIONAL { ?item wdt:P4212 ?item_code_v_fr_pactols } .
 
-    # Freebase ID (still accessible via Google)
-    OPTIONAL { ?item wdt:P646 ?item_code_v_freebase } .
-
     # National Central Library of Florence, bncf.firenze.sbn.it
     OPTIONAL { ?item wdt:P508 ?item_code_v_it_bncf } .
+
+    # Enciclopedia Italiana Treccani, treccani.it
+    OPTIONAL { ?item wdt:P3365 ?item_code_v_it_treccani } .
 
     # National Diet Library of Japan, ndl.go.jp
     OPTIONAL { ?item wdt:P349 ?item_code_v_jp_ndl } .
 
+    # KBpedia knowledge graph, kbpedia.org
+    OPTIONAL { ?item wdt:P8408 ?item_code_v_kbpedia } .
+
     # Store norske leksikon ID, snl.no
     OPTIONAL { ?item wdt:P4342 ?item_code_v_no_snl } .
 
+    # Xenopus Anatomy Ontology, ontobee.org/ontology/XAO
+    OPTIONAL { ?item wdt:P4495 ?item_code_v_ontobee_xao } .
+
     # Great Russian Encyclopedia Online, bigenc.ru
     OPTIONAL { ?item wdt:P2924 ?item_code_v_ru_greo } .
+
+    # Uberon, uberon.org
+    OPTIONAL { ?item wdt:P1554 ?item_code_v_uberon } .
 
     # Encyclopædia Britannica Online, britannica.com
     OPTIONAL { ?item wdt:P1417 ?item_code_v_uk_britannica } .
@@ -297,6 +318,9 @@ WHERE
 
     # Medical Subject Headings (MeSH), nlm.nih.gov/mesh/
     OPTIONAL { ?item wdt:P486 ?item_code_v_us_mesh } .
+
+    # NLM Unified Medical Language System (UMLS) controlled biomedical vocabulary unique identifier, nlm.nih.gov/research/umls
+    OPTIONAL { ?item wdt:P2892 ?item_code_v_us_umls_cui } .
 
     # Item, by label
     OPTIONAL { ?item rdfs:label ?item_name_v_wikidata_i_ar filter (lang(?item_name_v_wikidata_i_ar) = "ar") } .
