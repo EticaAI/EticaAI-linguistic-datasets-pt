@@ -197,6 +197,8 @@ WHERE
 #       mais próximo de tudo que poderia ser citado relacionado a corpo humano
 #       mesmo que tenhamos que quebrar em mais de um dataset (fititnt, 2020-12-17 08:38 BRT)
 # TODO: a query deveria retornar apenas o valor de texto, mas esta retornando URL (fititnt, 2020-12-17 08:38 BRT)
+# NOTE: Not sure about how to add P1296 (because of .cat domain, it is a culture, not a region) (fititnt, 2020-12-18 03:59 BRT)
+# NOTE: based on Q1072, others not added (at least not yet): P1256, P6573, P6900, P1245, P3417
 #
 SELECT
     ?item
@@ -205,13 +207,19 @@ SELECT
     ?item_code_v_au_aev
     ?item_code_v_babelnet
     ?item_code_v_cz_nkp
+    ?item_code_v_cz_psh
     ?item_code_v_de_brendaenzymes
     ?item_code_v_de_gnd
+    ?item_code_v_fr_pactols
     ?item_code_v_fr_universalis
     ?item_code_v_freebase
     ?item_code_v_jp_ndl
     ?item_code_v_it_bncf
+    ?item_code_v_no_snl
+    ?item_code_v_ru_greo
     ?item_code_v_uk_britannica
+    ?item_code_v_us_jstor
+    ?item_code_v_us_mag
     ?item_code_v_us_mesh
     ?item_name_v_wikidata_i_ar
     ?item_name_v_wikidata_i_en
@@ -241,6 +249,9 @@ WHERE
     # National Library of the Czech Republic, nkp.cz
     OPTIONAL { ?item wdt:P691 ?item_code_v_cz_nkp } .
 
+    # Czech Technical Library ID, psh.techlib.cz
+    OPTIONAL { ?item wdt:P1051 ?item_code_v_cz_psh } .
+
     # Brenda Tissue Ontology, www.brenda-enzymes.org
     OPTIONAL { ?item wdt:P5501 ?item_code_v_de_brendaenzymes } .
 
@@ -249,6 +260,9 @@ WHERE
 
     # Encyclopædia Universalis ID, universalis.fr
     OPTIONAL { ?item wdt:P3219 ?item_code_v_fr_universalis } .
+
+    # PACTOLS thesaurus ID, pactols.frantiq.fr
+    OPTIONAL { ?item wdt:P4212 ?item_code_v_fr_pactols } .
 
     # Freebase ID (still accessible via Google)
     OPTIONAL { ?item wdt:P646 ?item_code_v_freebase } .
@@ -259,8 +273,20 @@ WHERE
     # National Central Library of Florence, bncf.firenze.sbn.it
     OPTIONAL { ?item wdt:P508 ?item_code_v_it_bncf } .
 
+    # Store norske leksikon ID, snl.no
+    OPTIONAL { ?item wdt:P4342 ?item_code_v_no_snl } .
+
+    # Great Russian Encyclopedia Online, bigenc.ru
+    OPTIONAL { ?item wdt:P2924 ?item_code_v_ru_greo } .
+
     # Encyclopædia Britannica Online, britannica.com
     OPTIONAL { ?item wdt:P1417 ?item_code_v_uk_britannica } .
+
+    # Medical JSTOR, jstor.org
+    OPTIONAL { ?item wdt:P3827 ?item_code_v_us_jstor } .
+
+    # Microsoft Academic Graph (MAG)
+    OPTIONAL { ?item wdt:P6366 ?item_code_v_us_mag } .
 
     # Medical Subject Headings (MeSH), nlm.nih.gov/mesh/
     OPTIONAL { ?item wdt:P486 ?item_code_v_us_mesh } .
