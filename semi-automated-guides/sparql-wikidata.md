@@ -196,10 +196,8 @@ WHERE
 # TODO: a query ainda esta retornando poucos valores. O ideal seria o 
 #       mais próximo de tudo que poderia ser citado relacionado a corpo humano
 #       mesmo que tenhamos que quebrar em mais de um dataset (fititnt, 2020-12-17 08:38 BRT)
-# TODO: a query deveria retornar apenas o valor de texto, mas esta retornando URL (fititnt, 2020-12-17 08:38 BRT)
-# NOTE: Not sure about how to add P1296 (because of .cat domain, it is a culture, not a region) (fititnt, 2020-12-18 03:59 BRT)
-# NOTE: based on Q1072, others not added (at least not yet): P1256, P6573, P6900, P1245, P3417
-#
+# TODO: a query deveria retornar apenas o valor de texto (ex: Q1072), mas esta retornando URL (fititnt, 2020-12-17 08:38 BRT)
+# NOTE: based on Q1072, some IDs are not added on this example (at least not yet): P1296, P1256, P6573, P6900, P1245, P3417
 SELECT
     ?item
     # ?id
@@ -210,11 +208,14 @@ SELECT
     ?item_code_v_cz_psh
     ?item_code_v_de_brendaenzymes
     ?item_code_v_de_gnd
+    ?item_code_v_fipat_ta2
+    ?item_code_v_fipat_ta98_id
+    ?item_code_v_fipat_ta98_latin
     ?item_code_v_fr_pactols
     ?item_code_v_fr_universalis
     ?item_code_v_freebase
-    ?item_code_v_jp_ndl
     ?item_code_v_it_bncf
+    ?item_code_v_jp_ndl
     ?item_code_v_no_snl
     ?item_code_v_ru_greo
     ?item_code_v_uk_britannica
@@ -236,9 +237,6 @@ WHERE
 {
     # ?item wdt:P279 wd:Q25449120 . # human organ (Q25449120), 5 resultados em 2020 (pouco)
     ?item wdt:P279 wd:Q24060765 . # animal organ (Q24060765), 34 resuldados em 2020 (aidna pouco)
-    # ?item wdt:P279 ?id # animal organ (Q24060765), 34 resuldados em 2020 (aidna pouco)
-    
-    # TODO: parei na Gran Enciclopèdia Catalana ID de https://www.wikidata.org/wiki/Q1072, continuar (fititnt, 2020-12-17 12:12 BRT)
     
     # Australian Educational Vocabulary ID, vocabulary.curriculum.edu.au
     OPTIONAL { ?item wdt:P7033 ?item_code_v_au_aev } .
@@ -258,6 +256,15 @@ WHERE
     # German National Library ID, dnb.de
     OPTIONAL { ?item wdt:P227 ?item_code_v_de_gnd } .
 
+    # Terminologia Anatomica second edition (2019) identifier, ta2viewer.openanatomy.org
+    OPTIONAL { ?item wdt:P7173 ?item_code_v_fipat_ta2 } .
+
+    # Terminologia Anatomica 98 ID, unifr.ch/ifaa/
+    OPTIONAL { ?item wdt:P1323 ?item_code_v_fipat_ta98_id } .
+
+    # Terminologia Anatomica 98 Latin preferred term, unifr.ch/ifaa/
+    OPTIONAL { ?item wdt:P3982 ?item_code_v_fipat_ta98_latin } .
+
     # Encyclopædia Universalis ID, universalis.fr
     OPTIONAL { ?item wdt:P3219 ?item_code_v_fr_universalis } .
 
@@ -267,11 +274,11 @@ WHERE
     # Freebase ID (still accessible via Google)
     OPTIONAL { ?item wdt:P646 ?item_code_v_freebase } .
 
-    # National Diet Library of Japan, ndl.go.jp
-    OPTIONAL { ?item wdt:P349 ?item_code_v_jp_ndl } .
-
     # National Central Library of Florence, bncf.firenze.sbn.it
     OPTIONAL { ?item wdt:P508 ?item_code_v_it_bncf } .
+
+    # National Diet Library of Japan, ndl.go.jp
+    OPTIONAL { ?item wdt:P349 ?item_code_v_jp_ndl } .
 
     # Store norske leksikon ID, snl.no
     OPTIONAL { ?item wdt:P4342 ?item_code_v_no_snl } .
